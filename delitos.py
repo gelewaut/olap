@@ -24,8 +24,8 @@ output_subtipos = "utiles_caba/tables/subtipos.csv"
 output_detalle = "utiles_caba/tables/detalle.csv"
 output_fecha = "utiles_caba/tables/fechas.csv"
 
-subtipo_counts = df_delitos[['subtipo', 'comuna', 'mes', 'anio']].value_counts().reset_index()
-subtipo_counts.columns = [['subtipo',  'comuna', 'mes', 'anio', 'count']]
+subtipo_counts = df_delitos[['subtipo', 'barrio', 'mes', 'anio']].value_counts().reset_index()
+subtipo_counts.columns = [['subtipo',  'barrio', 'mes', 'anio', 'count']]
 subtipo_counts.to_csv(output_detalle, index=False)
 
 df_unique_tipo = df_delitos.drop_duplicates(subset=['tipo'])

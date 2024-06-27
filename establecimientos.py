@@ -20,5 +20,5 @@ df_educacion = pd.read_csv(educacion)
 df_educacion[['nombre_est', 'barrio']].to_csv(out_educacion, index=False)
 
 df_hospitales = pd.read_csv(hospitales)
-# print(df_hospitales['COD_POSTAL'])
-# df_hospitales[['nombre', 'barrio']].to_csv(out_hospitales, index=False)
+# print(df_hospitales.drop_duplicates([['CALLE', 'Numero']])['CALLE'])
+# df_hospitales[['NOMBRE', 'COD_POSTAL']].to_csv(out_hospitales, index=False)
